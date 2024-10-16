@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator with GST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Generator</h1>
+        <div class="invoice-details">
+            <label for="invoiceNumber">Invoice Number:</label>
+            <input type="text" id="invoiceNumber" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="customername">Customer Name:</label>
+            <input type="text" id="customername" required>
+            <label for="customeradress">Customer Address:</label>
+            <input type="text" id="CustomerAddress" required>
+        </div>
+
+        <div class="item-details">
+            <h2>Items</h2>
+            <div class="item">
+                <input type="text" placeholder="Item name" class="description" required>
+                <input type="number" placeholder="Quantity" class="quantity"  required>
+                <input type="number" placeholder="Price" class="unit-price"  required>
+                <button class="remove-item">Remove</button>
+            </div>
+            <button id="addItem">Add Item</button>
+        </div>
+
+        <h3> GST = <span id="totalGST">0.00</span></h3>
+        <h3>Total Amount = <span id="totalAmount">0.00</span></h3>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
